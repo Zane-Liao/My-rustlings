@@ -44,8 +44,8 @@ impl State {
         // TODO: create a match expression to process the different message variants
         match message {
             Message::ChangeColor(r, g, b) => self.change_color((r, g, b)),
-            Message::Move(p) => self.move_position(p),
             Message::Echo(s) => self.echo(s),
+            Message::Move(p) => self.move_position(p),
             Message::Quit => self.quit(),
         }
     }
